@@ -5,11 +5,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from utilities.BaseClass import BaseClass
 
-@pytest.mark.usefixtures("setup")
-class TestFirst:
 
-    def test_e2e(self, setup):
+# here no need to use @pytest.mark.usefixtures("setup") because we use inheritace of base class
+# in which we use @pytest.mark.usefixtures("setup")
+#@pytest.mark.usefixtures("setup")
+class TestFirst(BaseClass):
+
+    def test_e2e(self):
         self.driver.implicitly_wait(4)
 
         products = self.driver.find_elements(By.XPATH, "//div[@class='card h-100']")
