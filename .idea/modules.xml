@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PythonFamework.iml" filepath="$PROJECT_DIR$/.idea/PythonFamework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MyPythonAutomation/MyPythonCode/myPythonLearning/.idea/myPythonLearning.iml" filepath="$PROJECT_DIR$/../MyPythonAutomation/MyPythonCode/myPythonLearning/.idea/myPythonLearning.iml" />
+    </modules>
+  </component>
+</project>
