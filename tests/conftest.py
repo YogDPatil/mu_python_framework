@@ -23,7 +23,7 @@ def setup(request):
     elif browser_name == "firefox":
         geckodriverPath = Service("/Users/codeclouds-yogesh/Downloads/geckodriver")
         driver = webdriver.Firefox(service=geckodriverPath)
-    driver.get("https://rahulshettyacademy.com/angularpractice/shop")
+    driver.get("https://rahulshettyacademy.com/angularpractice")
     driver.maximize_window()
     request.cls.driver = driver
     yield
