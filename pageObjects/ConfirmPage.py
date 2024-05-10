@@ -4,8 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from utilities.BaseClass import BaseClass
 
-class ConfirmPage:
+
+class ConfirmPage(BaseClass):
 
     locationField = (By.ID, "country")
     selLocation = (By.LINK_TEXT, "India")
@@ -20,8 +22,9 @@ class ConfirmPage:
         return self.driver.find_element(*ConfirmPage.locationField)
 
     def selectLocation(self):
-        wait = WebDriverWait(self.driver, 15)
-        wait.until(expected_conditions.presence_of_element_located(ConfirmPage.selLocation))
+        #wait = WebDriverWait(self.driver, 15)
+        #wait.until(expected_conditions.presence_of_element_located(ConfirmPage.selLocation))
+        self.waitTillPresenceOfElementLocated(ConfirmPage.selLocation)
         #time.sleep(5)
         return self.driver.find_element(*ConfirmPage.selLocation)
 

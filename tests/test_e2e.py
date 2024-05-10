@@ -17,7 +17,7 @@ from utilities.BaseClass import BaseClass
 # here no need to use @pytest.mark.usefixtures("setup") because we use inheritace of base class
 # in which we use @pytest.mark.usefixtures("setup")
 #@pytest.mark.usefixtures("setup")
-class TestFirst(BaseClass):
+class TestE2E(BaseClass):
 
     def test_e2e(self):
         self.driver.implicitly_wait(4)
