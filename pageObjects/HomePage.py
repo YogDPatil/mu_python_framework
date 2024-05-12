@@ -21,12 +21,15 @@ class HomePage:
         return shopPage
 
     def enterName(self, name):
+        self.driver.find_element(*HomePage.nameField).clear()
         self.driver.find_element(*HomePage.nameField).send_keys(name)
 
     def enterEmail(self, email):
+        self.driver.find_element(*HomePage.emailField).clear()
         self.driver.find_element(*HomePage.emailField).send_keys(email)
 
     def enterPassword(self, password):
+        self.driver.find_element(*HomePage.passwordField).clear()
         self.driver.find_element(*HomePage.passwordField).send_keys(password)
 
     def genderDropdown(self):
