@@ -3,6 +3,7 @@ import time
 import pytest
 
 from pageObjects.HomePage import HomePage
+from testData.homePageData import homePageData
 from utilities.BaseClass import BaseClass
 
 
@@ -24,6 +25,6 @@ class TestHomePage(BaseClass):
 
 
     # here use parameter of fixture as dictionary for more readble formate
-    @pytest.fixture(params=[{"fName": "Yogesh", 'email': 'ydp', 'pass': 'pass', 'gender': 'Male'}, {"fName": "Tejal", 'email': 'teju', 'pass': 'pass', 'gender': 'Female'}])
+    @pytest.fixture(params=homePageData.testHomePageData)
     def getHomePageData(self, request):
         return request.param
