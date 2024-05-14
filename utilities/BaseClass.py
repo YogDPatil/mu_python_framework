@@ -25,7 +25,7 @@ class BaseClass:
         logger = logging.getLogger(loggerName)
 
         # FileHandler is for locating log file
-        fileHandler = logging.FileHandler('logFile.log')
+        fileHandler = logging.FileHandler('/Users/codeclouds-yogesh/Documents/MythonDemoVENV/PythonFamework/logFile.log')
         # format log file name
         formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s")
         fileHandler.setFormatter(formatter)

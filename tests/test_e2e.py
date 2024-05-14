@@ -18,7 +18,6 @@ from utilities.BaseClass import BaseClass
 # in which we use @pytest.mark.usefixtures("setup")
 #@pytest.mark.usefixtures("setup")
 class TestE2E(BaseClass):
-
     def test_e2e(self):
         log = self.getLogger()
         self.driver.implicitly_wait(4)
