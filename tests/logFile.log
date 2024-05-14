@@ -1,0 +1,10 @@
+2024-05-14 17:57:44,633 :INFO :utilities.BaseClass :Products name iphone X
+2024-05-14 17:57:44,643 :INFO :utilities.BaseClass :Products name Samsung Note 8
+2024-05-14 17:57:44,650 :INFO :utilities.BaseClass :Products name Nokia Edge
+2024-05-14 17:57:44,684 :INFO :utilities.BaseClass :Products name Blackberry
+2024-05-14 17:57:44,744 :INFO :utilities.BaseClass :Selected project Nokia Edge is correct
+2024-05-14 17:59:55,499 :INFO :test_e2e :Products name iphone X
+2024-05-14 17:59:55,507 :INFO :test_e2e :Products name Samsung Note 8
+2024-05-14 17:59:55,514 :INFO :test_e2e :Products name Nokia Edge
+2024-05-14 17:59:55,545 :INFO :test_e2e :Products name Blackberry
+2024-05-14 17:59:55,604 :INFO :test_e2e :Selected project Nokia Edge is correct

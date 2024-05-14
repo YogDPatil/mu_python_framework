@@ -20,6 +20,7 @@ from utilities.BaseClass import BaseClass
 class TestE2E(BaseClass):
 
     def test_e2e(self):
+        log = self.getLogger()
         self.driver.implicitly_wait(4)
         homePage = HomePage(self.driver)
 
@@ -29,6 +30,7 @@ class TestE2E(BaseClass):
         for product in products:
             #productName = product.shopPage.getProductNames().text
             productName = product.find_element(By.XPATH, "div/h4/a").text
+            log.info("Products name "+productName)
 
             if productName == "Nokia Edge":
                 product.find_element(By.XPATH, "div/button").click()
@@ -37,6 +39,7 @@ class TestE2E(BaseClass):
         #selectedProduct = self.driver.find_element(By.XPATH, "//h4[@class='media-heading']/a").text
         selectedProduct = checkoutPage.getSelectedProject().text
         assert selectedProduct == "Nokia Edge"
+        log.info("Selected project "+selectedProduct+ " is correct")
         #self.driver.find_element(By.XPATH, "//button[@class='btn btn-success']").click()
         confirmPage = checkoutPage.checkoutBuyBttton()
         #self.driver.find_element(By.ID, "country").send_keys('ind')

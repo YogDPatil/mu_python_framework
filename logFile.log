@@ -1,0 +1,5 @@
+2024-05-14 17:55:48,359 :INFO :utilities.BaseClass :Products name iphone X
+2024-05-14 17:55:48,367 :INFO :utilities.BaseClass :Products name Samsung Note 8
+2024-05-14 17:55:48,375 :INFO :utilities.BaseClass :Products name Nokia Edge
+2024-05-14 17:55:48,408 :INFO :utilities.BaseClass :Products name Blackberry
+2024-05-14 17:55:48,468 :INFO :utilities.BaseClass :Selected project Nokia Edge is correct
