@@ -7,5 +7,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="myPythonLearning" />
+    <orderEntry type="module" module-name="Python_Basics" />
   </component>
 </module>

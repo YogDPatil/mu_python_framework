@@ -1,3 +1,4 @@
+import os
 import time
 
 import pytest
@@ -6,11 +7,12 @@ from selenium.webdriver.chrome.service import Service
 
 driver = None
 
+
 # this code is for to select browser from terminal
 # and make chrome default if not selected
 def pytest_addoption(parser):
     parser.addoption(
-        "--browser_name", action = "store", default = "chrome"
+        "--browser_name", action="store", default="chrome"
     )
 
 
@@ -20,18 +22,21 @@ def setup(request):
     global driver
     # below line code is connect browser_name from terinal to this code
     browser_name = request.config.getoption("browser_name")
+    chromedriver = os.getcwd() + '/../drivers/chromedriver'
+    geckodriver = os.getcwd() + '/../drivers/geckodriver'
 
     if browser_name == "chrome":
-        chromdriverPath = Service("/Users/codeclouds-yogesh/Downloads/chromedriver-mac-arm64/chromedriver")
+        chromdriverPath = Service(chromedriver)
         driver = webdriver.Chrome(service=chromdriverPath)
     elif browser_name == "firefox":
-        geckodriverPath = Service("/Users/codeclouds-yogesh/Downloads/geckodriver")
+        geckodriverPath = Service(geckodriver)
         driver = webdriver.Firefox(service=geckodriverPath)
     driver.get("https://rahulshettyacademy.com/angularpractice")
     driver.maximize_window()
     request.cls.driver = driver
     yield
     driver.close()
+
 
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item):
@@ -57,4 +62,4 @@ def pytest_runtest_makereport(item):
 
 
 def _capture_screenshot(name):
-        driver.get_screenshot_as_file(name)
+    driver.get_screenshot_as_file(name)
